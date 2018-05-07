@@ -10,15 +10,15 @@ foreach ( $fields as $field ) {
 		die;
 	}
 }
-$id         = $_POST['id'];
-$title      = $_POST['title'];
-$h1         = $_POST['h1'];
-$p          = $_POST['p'];
-$span_class = $_POST['span_class'];
-$span_text  = $_POST['span_text'];
-$img_alt    = $_POST['img_alt'];
-$img_src    = $_POST['img_src'];
-$nav_title  = $_POST['nav_title'];
+$id         = htmlentities($_POST['id']);
+$title      = htmlentities($_POST['title']);
+$h1         = htmlentities($_POST['h1']);
+$p          = htmlentities($_POST['p']);
+$span_class = htmlentities($_POST['span_class']);
+$span_text  = htmlentities($_POST['span_text']);
+$img_alt    = htmlentities($_POST['img_alt']);
+$img_src    = htmlentities($_POST['img_src']);
+$nav_title  = htmlentities($_POST['nav_title']);
 
 
 if ( editPage( $db, $id, $title, $h1, $p, $span_class, $span_text, $img_alt, $img_src, $nav_title ) ) {
