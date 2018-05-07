@@ -1,7 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: federica
- * Date: 04/05/2018
- * Time: 17:50
- */
+require '../include/db.php';
+
+if(isset($_POST['id'])){
+	$id = $_POST['id'];
+}
+
+if (deletePage($db, $id)) {
+	redirectToIndex();
+}

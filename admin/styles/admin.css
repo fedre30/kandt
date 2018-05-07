@@ -1,0 +1,78 @@
+
+/* Admin page */
+
+.admin-title{
+    text-align: center;
+    font-size: 5rem;
+    margin-bottom: 3rem;
+}
+
+.pages-list{
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.pages-items{
+    list-style: none;
+    font-size: 2rem;
+}
+
+.admin-subtitle{
+    text-align: center;
+    margin-top: 6rem;
+}
+
+/* Forms */
+
+.pages-form{
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    margin: 2rem auto;
+}
+
+.pages-form{
+   font-size: 2rem;
+}
+
+.pages-form input{
+    margin-bottom: 2rem;
+}
+
+.pages-form input[type="submit"]{
+    margin-top: 3rem;
+}
+
+.website-link{
+    margin: 2rem auto;
+    text-align: center;
+    font-size: 2rem;
+}
+
+/* Show page */
+
+.details{
+    margin: 3rem;
+
+}
+
+.details p{
+    font-size: 2rem;
+}
+
+.label-list{
+    font-weight: bold;
+    color: #2aabd2;
+}
+
+.links-wrapper{
+    width: 30vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.show-link{
+    margin: 3rem;
+    font-size: 1.5rem;
+}
+

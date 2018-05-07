@@ -1,6 +1,11 @@
 <?php
-function isActive($url){
-    if($_SERVER["PHP_SELF"] == $url){
-        echo 'class="active"';
+
+function isActive($slug){
+	$page = urldecode($_SERVER['QUERY_STRING']);
+
+
+    if(substr($page, 2, strlen($slug)) === $slug){
+        return 'class="active"';
     }
+
 }

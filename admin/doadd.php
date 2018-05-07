@@ -1,7 +1,26 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: federica
- * Date: 04/05/2018
- * Time: 17:49
- */
+require '../include/db.php';
+
+$fields = array( 'title', 'h1', 'p', 'span_class', 'span_text', 'img_alt', 'img_src', 'nav_title' );
+
+foreach ( $fields as $field ) {
+	if ( ! isset( $_POST[ $field ] ) || empty( trim( $_POST[ $field ] ) ) ) {
+		echo 'All fields are required';
+		die;
+	}
+}
+
+$title      = $_POST['title'];
+$h1         = $_POST['h1'];
+$p          = $_POST['p'];
+$span_class = $_POST['span_class'];
+$span_text  = $_POST['span_text'];
+$img_alt    = $_POST['img_alt'];
+$img_src    = $_POST['img_src'];
+$nav_title  = $_POST['nav_title'];
+
+if ( addPage( $db, $title, $h1, $p, $span_class, $span_text, $img_alt, $img_src, $nav_title ) ) {
+	redirectToIndex();
+}
+
+
